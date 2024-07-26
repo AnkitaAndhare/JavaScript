@@ -19,3 +19,17 @@ let islogged = false
 console.log(typeof name);
 console.log(typeof undefined);  // undefined 
 console.log(typeof null);       // object 
+
+/*
+                           typeof
+1 String                    string
+2 Number                    number  
+3 Boolean                   boolean
+4 null (empty not zero)     object
+5 undefined                 undefined
+6 Symbol                    Symbol
+7 BigInt                     
+
+
+
+*/
