@@ -93,7 +93,18 @@ non primitive   reference type (modification affects)
 2 Array         
 3 Function     function obj
 
+
+
+stack (primitive)           heap (non-privitive)
+
+
+
 */
+
+ 
+
+
+
 
 
 
