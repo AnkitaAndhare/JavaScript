@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=ul, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body style="background-color: black; color:white">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    // need tree to traverse whole tree
+    function addLanguage(langname) {
+        const li = document.createElement('li')
+        li.innerHTML = `${langname}`
+        document.querySelector('.language').appendChild(li)
+    }
+
+    addLanguage("python")
+    addLanguage('java')
+
+    function addOptiLanguage(langname) {
+        const li = document.createElement('li')
+        const addText = document.createTextNode(langname)
+        li.appendChild(addText)
+        //li.appendChild(document.createTextNode(langname))
+        
+        document.querySelector('.language').appendChild(li)
+
+    }
+    addOptiLanguage("golang")
+
+    // Edit
+
+    const secLang = document.querySelector("li:nth-child(2)")
+    //secLang.innerHTML = "c++";
+    const newLi = document.createElement('li')
+    newLi.textContent = "mojo"
+    secLang.replaceWith(newLi)
+
+   // another edit method
+
+    const firstlang = document.querySelector('li:first-child')
+    firstlang.outerHTML = '<li> typescript</li>'
+
+    // remove element 
+    const laslang = document.querySelector('li:last-child')
+    laslang.remove()
+    
+</script>
+
+
+
+</html>

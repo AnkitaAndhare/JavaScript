@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM learning</title>
+    <style>
+        .bg-black {
+            background-color: black;
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body class="bg-black">
+    <div>
+        <h1 id="title" class="heading">DOM learning <span style="display: none;">test text</span> </h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicin</p>
+        <h2> Maxime, molestias? Pariatur, iusto minus alias nulla quis, </h2>
+
+        <input type="password" name="" id="">
+
+        <ul>
+            <li  class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+        </ul>
+    </div>
+</body>
+
+</html>
+
+
+
+
+<!--       window
+           document
+           html
+head                      body 
+
+title -> text node         div  attribute
+meta                       h1, p 
+
+
+
+document.getElementById('title')
+<h1 id=​"title" class=​"heading">​DOM learning ​</h1>​
+
+document.getElementById('title').id
+'title'
+
+document.getElementById('title').className
+'heading'
+
+document.getElementById('title').getAttribute('id')
+'title'
+
+document.getElementById('title').getAttribute('class')
+'heading'
+
+document.getElementById('title').setAttribute('class','test')
+undefined but class will change as test
+
+title.style.backgroundColor='pink'
+'pink'
+
+title.textContent
+'DOM learning test text '
+
+title.innerText
+'DOM learning'
+
+title.innerHTML
+'DOM learning <span style="display: none;">test text</span> 
+
+return first heading only
+document.querySelector('h1') 
+<h1 id=​"title" class=​"heading">​…​</h1>​"DOM learning "<span style=​"display:​ none;​">​test text​</span>​</h1>​
+
+document.querySelector('#title')
+<h1 id=​"title" class=​"heading">​…​</h1>​"DOM learning "<span style=​"display:​ none;​">​test text​</span>​</h1>​
+
+
+document.querySelector('.heading')
+
+
+document.querySelector('ul')
+<ul>​<li>​…​</li>​<li>​…​</li>​<li>​…​</li>​</ul>​
+
+const myul= document.querySelector('ul')
+undefined
+
+const turngreen = myul.querySelector('li')
+undefined
+
+turngreen.style.backgroundColor = 'green'
+
+turngreen.innerText
+'one'
+
+turngreen.innerText = "five"
+'five'
+
+
+const tempLilist = document.querySelectorAll('li')
+undefined
+
+tempLilist
+NodeList(3) [li, li, li]
+
+tempLilist[0].style.color = 'red'
+'red'
+
+const myH1 = document.querySelectorAll('h1')
+myH1
+NodeList [h1#title.heading]
+
+myH1[0].style.color = 'red'
+'red'
+
+document.getElementsByClassName('list-item')
+HTMLCollection(3) [li.list-item, li.list-item, li.list-item]
+
+convert HTMLCollection to array 
+
+Array.from(tempclasslist)
+(3) [li.list-item, li.list-item, li.list-item]
+0: li.list-item
+1: li.list-item
+2: li.list-item
+length: 3
+[[Prototype]]: Array(0)
+
+
+const myconvertedarr = Array.from(tempclasslist)
+
+myconvertedarr
+(3) [li.list-item, li.list-item, li.list-item]
+
+myconvertedarr.forEach((li) =>{
+ li.style.color = 'orange'
+})
+
+-->

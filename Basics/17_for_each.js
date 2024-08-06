@@ -1,5 +1,6 @@
 // for each loop need callback fun and callback fun has no name
 // item take all value from coding array
+//The forEach method doesn't return a new array
 
 const coding = ["js", "ruby", "python", "java", "cpp"];
 
