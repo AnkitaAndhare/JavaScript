@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Async in JavaScript</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // for browser 
+    const sayAnkita = function () {
+        console.log("Ankita")
+    };
+
+    const changeText = function () {
+        document.querySelector('h1').innerHTML = 'best js series'
+
+    }
+    //setTimeout(sayAnkita, 4000)   // refrence to fun not calling() of fun
+
+    const changeme = setTimeout(changeText, 2000)  // after 4 sec it will display best js series to stop its diplay before 4 sec if we click on stop then we use cleartimeout 
+
+
+    document.querySelector('#stop').addEventListener('click', function (e) {
+        clearTimeout(changeme)
+        console.log('stopped')
+    })
+
+    //clearTimeout(changeme)   
+</script>
+
+</html>
+
+
+<!--   JS  default 
+
+1 synchronous =>  every statement of the code gets executed one by one.
+2 Single threaded => execute only one task at a time
+
+Execution Context
+execute one line of code at a time 
+
+
+Blocking code         Vs           Non blocking code
+
+block the flow of code             Does not block code
+      |                                    |
+read file sync                      read file Async
+
+
+
+
+
+
+
+
+
+
+-->
