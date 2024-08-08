@@ -1,10 +1,10 @@
 // we created this promise
 
-let promise = new Promise((resolve, reject) => {
-  console.log("i am a promise");
-  //resolve(123)
-  reject("some error occur")
-});
+// let promise = new Promise((resolve, reject) => {
+//   console.log("i am a promise");
+//   //resolve(123)
+//   reject("some error occur")
+// });
 
 function getData(dataId) {
   return new Promise((resolve, reject) => {
